@@ -1,0 +1,34 @@
+﻿@model Domain.Market
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Market</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketIndex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarketIndex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarketDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MarketId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

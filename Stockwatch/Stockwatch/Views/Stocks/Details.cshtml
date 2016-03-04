@@ -1,0 +1,42 @@
+﻿@model Domain.Stock
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StockIndex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockIndex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StockId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

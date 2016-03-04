@@ -9,9 +9,14 @@ namespace Domain
     public class User
     {
         public int UserId { get; set; }
-        public int PersonId { get; set; } 
         public string Username { get; set; }
         protected string Password { get; set; }
+
+        public int PersonId { get; set; }
+        public virtual Person Person { get; set; }
+
+        public virtual List<Stock> Stocks { get; set; }
+
 
     }
 }

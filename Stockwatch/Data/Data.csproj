@@ -50,6 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IEFRepository.cs" />
+    <Compile Include="Migrations\201603040224171_PersonToPeopleMigration.cs" />
+    <Compile Include="Migrations\201603040224171_PersonToPeopleMigration.Designer.cs">
+      <DependentUpon>201603040224171_PersonToPeopleMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\MigrationConfiguration.cs" />
     <Compile Include="Repositories\EFRepository.cs" />
     <Compile Include="Repositories\StockRepository.cs" />
     <Compile Include="Repositories\MarketRepository.cs" />
@@ -62,7 +67,17 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{FE2F9F2F-991D-4693-8372-EEB1D9496A40}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603040224171_PersonToPeopleMigration.resx">
+      <DependentUpon>201603040224171_PersonToPeopleMigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
